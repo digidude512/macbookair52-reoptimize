@@ -1,0 +1,14 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux
+Target = linux-lts
+Target = linux-zen
+Target = linux-hardened
+
+[Action]
+Description = Reoptimize MacBook after kernel update
+When = PostTransaction
+Exec = /usr/local/bin/reoptimize-macbook.sh
+Depends = sudo
