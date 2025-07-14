@@ -1,0 +1,9 @@
+[Unit]
+Description=Run MacBook reoptimization script at boot (and 15min after)
+
+[Timer]
+OnBootSec=15min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
