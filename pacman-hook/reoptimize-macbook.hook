@@ -1,14 +1,10 @@
 [Trigger]
 Operation = Install
 Operation = Upgrade
-Type = Package
-Target = linux
-Target = linux-lts
-Target = linux-zen
-Target = linux-hardened
+Type = Path
+Target = /boot/vmlinuz-linux
 
 [Action]
-Description = Reoptimize MacBook after kernel update
+Description = Reapplying MacBook optimizations after kernel upgrade...
 When = PostTransaction
 Exec = /usr/local/bin/reoptimize-macbook.sh
-Depends = sudo
