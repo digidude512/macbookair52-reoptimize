@@ -1,0 +1,11 @@
+[Unit]
+Description=PowerTOP auto-tune
+After=multi-user.target
+ConditionVirtualization=!container
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/powertop --auto-tune
+
+[Install]
+WantedBy=multi-user.target
