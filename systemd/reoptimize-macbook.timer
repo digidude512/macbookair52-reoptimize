@@ -1,8 +1,8 @@
 [Unit]
-Description=Run MacBook reoptimization script at boot (and 15min after)
+Description=Run MacBook reoptimization weekly
 
 [Timer]
-OnBootSec=15min
+OnCalendar=weekly
 Persistent=true
 
 [Install]
