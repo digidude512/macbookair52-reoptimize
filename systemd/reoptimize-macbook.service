@@ -1,12 +1,7 @@
 [Unit]
-Description=Reoptimize MacBookAir performance & thermal settings
+Description=Reoptimize MacBook after kernel update or boot
 After=multi-user.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/reoptimize-macbook.sh
-StandardOutput=journal
-StandardError=journal
-
-[Install]
-WantedBy=multi-user.target
+ExecStart=/usr/bin/bash /usr/local/bin/reoptimize-macbook.sh
